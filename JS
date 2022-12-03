@@ -1,5 +1,3 @@
-
-
 function setup() {
   createCanvas(600, 600);
 } 
@@ -88,14 +86,20 @@ var randomInt = GetRandomInteger(1, 255);
 var rgbcolor = random_rgba();
  
  
+ 	var creamMouseColor = "#e5dab7";
+  var brownMouseColor = "#3c1321";
+  var blueMouseColor = "#1428a0";
+  var blackMouseColor = "#090808";
+  
+  
   function mickeyMouse1() {
   
-  fill('black');
+  fill(creamMouseColor);
   ellipse(frameCount/2,250,25,25);
-  fill(255,255,255,50,);
-  fill(100,100,0,255);
+  //fill(255,255,255,50,);
+  fill(brownMouseColor);
   ellipse(frameCount/2-10,240,20,20);
-  fill(100,50,0,255);
+  fill(brownMouseColor);
   ellipse(frameCount/2+10,240,20,20);
   if (frameCount>=1200)
   {
@@ -107,12 +111,11 @@ var rgbcolor = random_rgba();
   
   function mickeyMouse2() {
   
-  fill('black');
+  fill(creamMouseColor);
   ellipse(frameCount/2+20,200+frameCount/15,25,25);
-  fill(255,255,255,50,);
-  fill(100,100,0,255);
+  fill(blueMouseColor);
   ellipse(frameCount/2+10,190+frameCount/15,20,20);
-  fill(100,50,0,255);
+  fill(blueMouseColor);
   ellipse(frameCount/2+30,190+frameCount/15,20,20);
   if (frameCount>=1200)
   {
@@ -124,12 +127,11 @@ var rgbcolor = random_rgba();
   
   function mickeyMouse3() {
   
-  fill( 175 , 20 , 100 );
+  fill( creamMouseColor );
   ellipse(frameCount/2+20,280-frameCount/15,25,25);
-  fill(255,255,255,50,);
-  fill(100,100,0,255);
+  fill(blackMouseColor);
   ellipse(frameCount/2+10,270-frameCount/15,20,20);
-  fill(100,50,0,255);
+  fill(blackMouseColor);
   ellipse(frameCount/2+30,270-frameCount/15,20,20);
   if (frameCount>=1200)
   {
@@ -148,39 +150,142 @@ var rgbcolor = random_rgba();
   };
   ground();
   
-  
+  var brownTreeColor = "#3b3429";
+  var greenTreeColor = "#094026";
   
   function farTrees(){
+  
+  	
 		var fartreeMoveX = mouseX/30;
     var fartreeMoveY = mouseY/80;
+    
+     // far tree 1
+    
+  	fill(brownTreeColor); 
+    rect(620 - fartreeMoveX, 294 - fartreeMoveY ,10,20); 
+    fill(greenTreeColor);
+    ellipse(626 - fartreeMoveX, 272 - fartreeMoveY ,20,20);
+    ellipse(624 - fartreeMoveX, 292 - fartreeMoveY,30,20);
+    ellipse(580 - fartreeMoveX, 282 - fartreeMoveY ,20,20);
+    
+    // far tree 1   
+  	fill(brownTreeColor); 
+    rect(570 - fartreeMoveX, 294 - fartreeMoveY ,10,20); 
+    fill(greenTreeColor);
+    ellipse(576 - fartreeMoveX, 272 - fartreeMoveY ,20,20);
+    ellipse(574 - fartreeMoveX, 292 - fartreeMoveY,30,20);
+    ellipse(580 - fartreeMoveX, 282 - fartreeMoveY ,20,20);
+    
     // far tree 1
     
-  	fill(67, 51, 8); 
+  	fill(brownTreeColor); 
+    rect(520 - fartreeMoveX, 294 - fartreeMoveY ,10,20); 
+    fill(greenTreeColor);
+    ellipse(526 - fartreeMoveX, 272 - fartreeMoveY ,20,20);
+    ellipse(524 - fartreeMoveX, 292 - fartreeMoveY,30,20);
+    ellipse(530 - fartreeMoveX, 282 - fartreeMoveY ,20,20);
+    
+    // far tree 1
+    
+  	fill(brownTreeColor); 
+    rect(470 - fartreeMoveX, 294 - fartreeMoveY ,10,20); 
+    fill(greenTreeColor);
+    ellipse(476 - fartreeMoveX, 272 - fartreeMoveY ,20,20);
+    ellipse(474 - fartreeMoveX, 292 - fartreeMoveY,30,20);
+    ellipse(480 - fartreeMoveX, 282 - fartreeMoveY ,20,20);
+    
+    // far tree 1
+    
+  	fill(brownTreeColor); 
+    rect(420 - fartreeMoveX, 294 - fartreeMoveY ,10,20); 
+    fill(greenTreeColor);
+    ellipse(426 - fartreeMoveX, 272 - fartreeMoveY ,20,20);
+    ellipse(424 - fartreeMoveX, 292 - fartreeMoveY,30,20);
+    ellipse(430 - fartreeMoveX, 282 - fartreeMoveY ,20,20);
+    
+    // far tree 2
+    
+  	fill(brownTreeColor); 
+    rect(370 - fartreeMoveX, 294 - fartreeMoveY ,10,20); 
+    fill(greenTreeColor);
+    ellipse(376 - fartreeMoveX, 272 - fartreeMoveY ,20,20);
+    ellipse(374 - fartreeMoveX, 292 - fartreeMoveY,30,20);
+    ellipse(380 - fartreeMoveX, 282 - fartreeMoveY ,20,20);
+    
+    // far tree 2
+    
+  	fill(brownTreeColor); 
     rect(320 - fartreeMoveX, 294 - fartreeMoveY ,10,20); 
-    fill(23, 69, 29);
+    fill(greenTreeColor);
     ellipse(326 - fartreeMoveX, 272 - fartreeMoveY ,20,20);
     ellipse(324 - fartreeMoveX, 292 - fartreeMoveY,30,20);
     ellipse(330 - fartreeMoveX, 282 - fartreeMoveY ,20,20);
     
     // far tree 2
     
-    fill(67, 51, 8); 
+  	fill(brownTreeColor); 
+    rect(270 - fartreeMoveX, 294 - fartreeMoveY ,10,20); 
+    fill(greenTreeColor);
+    ellipse(276 - fartreeMoveX, 272 - fartreeMoveY ,20,20);
+    ellipse(274 - fartreeMoveX, 292 - fartreeMoveY,30,20);
+    ellipse(280 - fartreeMoveX, 282 - fartreeMoveY ,20,20);
+    
+    // far tree 3
+    
+    fill(brownTreeColor); 
     rect(220- fartreeMoveX, 294 - fartreeMoveY ,10,20); 
-    fill(23, 69, 29);
+    fill(greenTreeColor);
     ellipse(226-fartreeMoveX, 272 - fartreeMoveY ,20,20);
     ellipse(224- fartreeMoveX, 292 - fartreeMoveY,30,20);
     ellipse(230-fartreeMoveX, 282 - fartreeMoveY ,20,20);
     
-    // far tree 3
+    // far tree 4
+    fill(brownTreeColor); 
+    rect(170- fartreeMoveX, 294 - fartreeMoveY ,10,20); 
+    fill(greenTreeColor);
+    ellipse(176-fartreeMoveX, 272 - fartreeMoveY ,20,20);
+    ellipse(174- fartreeMoveX, 292 - fartreeMoveY,30,20);
+    ellipse(180-fartreeMoveX, 282 - fartreeMoveY ,20,20);
     
-    fill(67, 51, 8); 
-    rect(270- fartreeMoveX, 334 - fartreeMoveY ,10,20); 
-    fill(23, 69, 29);
-    ellipse(276-fartreeMoveX, 312 - fartreeMoveY ,20,20);
-    ellipse(274- fartreeMoveX, 332 - fartreeMoveY,30,20);
-    ellipse(270-fartreeMoveX, 322 - fartreeMoveY ,20,20);
+    // far tree 4
+    
+    fill(brownTreeColor); 
+    rect(120- fartreeMoveX, 294 - fartreeMoveY ,10,20); 
+    fill(greenTreeColor);
+    ellipse(126-fartreeMoveX, 272 - fartreeMoveY ,20,20);
+    ellipse(124- fartreeMoveX, 292 - fartreeMoveY,30,20);
+    ellipse(130-fartreeMoveX, 282 - fartreeMoveY ,20,20);
+    
+    // far tree 4
+    
+    fill(brownTreeColor); 
+    rect(70- fartreeMoveX, 294 - fartreeMoveY ,10,20); 
+    fill(greenTreeColor);
+    ellipse(76-fartreeMoveX, 272 - fartreeMoveY ,20,20);
+    ellipse(74- fartreeMoveX, 292 - fartreeMoveY,30,20);
+    ellipse(80-fartreeMoveX, 282 - fartreeMoveY ,20,20);
+    
+    // far tree 4
+    
+    fill(brownTreeColor); 
+    rect(20- fartreeMoveX, 294 - fartreeMoveY ,10,20); 
+    fill(greenTreeColor);
+    ellipse(26-fartreeMoveX, 272 - fartreeMoveY ,20,20);
+    ellipse(24- fartreeMoveX, 292 - fartreeMoveY,30,20);
+    ellipse(30-fartreeMoveX, 282 - fartreeMoveY ,20,20);
+    
+    // far tree 5
+    
+    fill(brownTreeColor); 
+    rect(250- fartreeMoveX, 334 - fartreeMoveY ,10,20); 
+    fill(greenTreeColor);
+    ellipse(256-fartreeMoveX, 312 - fartreeMoveY ,20,20);
+    ellipse(254- fartreeMoveX, 332 - fartreeMoveY,30,20);
+    ellipse(250-fartreeMoveX, 322 - fartreeMoveY ,20,20);
     translate(-40,-40);
     scale(1.5);
+    
+    
     
 	};
 
@@ -194,22 +299,21 @@ var rgbcolor = random_rgba();
     
     // semi-close tree 1
     
-    fill(67, 51, 8); 
+    fill(brownTreeColor); 
     rect(320 - semiCloseMoveX, 294 - semiCloseMoveY , 10, 20); 
-    fill(23, 69, 29);
+    fill(greenTreeColor);
     ellipse(326 - semiCloseMoveX, 292 - semiCloseMoveY , 20,20);
     ellipse(324 - semiCloseMoveX, 272 - semiCloseMoveY ,30,20);
     ellipse(330 - semiCloseMoveX, 282 - semiCloseMoveY ,20,20);
     
     // semi-close tree 2
     
-    fill(67, 51, 8); 
+    fill(brownTreeColor); 
     rect(100 - semiCloseMoveX, 294 - semiCloseMoveY , 10, 20); 
-    fill(23, 69, 29);
+    fill(greenTreeColor);
     ellipse(106 - semiCloseMoveX, 292 - semiCloseMoveY , 20,20);
     ellipse(104 - semiCloseMoveX, 272 - semiCloseMoveY ,30,20);
     ellipse(110 - semiCloseMoveX, 282 - semiCloseMoveY ,20,20);
-    
     
     
   };
@@ -221,9 +325,9 @@ var rgbcolor = random_rgba();
     var veryCloseMoveY = mouseY/20;
     
     // very close tree 1
-    fill(67, 51, 8);
+    fill(brownTreeColor);
     rect(170 - veryCloseMoveX, 394 - veryCloseMoveY ,10,20); 
-    fill(23, 69, 29);
+    fill(greenTreeColor);
     ellipse(176 - veryCloseMoveX, 392 - veryCloseMoveY ,20,20);
     ellipse(174 - veryCloseMoveX, 372 - veryCloseMoveY ,30,20);
     ellipse(180 - veryCloseMoveX, 382 - veryCloseMoveY ,20,20);
@@ -231,9 +335,9 @@ var rgbcolor = random_rgba();
    
     
    	// very close tree 2
-    fill(67, 51, 8); 
+    fill(brownTreeColor); 
     rect(220 - veryCloseMoveX, 394 - veryCloseMoveY ,10,20);
-    fill(23, 69, 29);
+    fill(greenTreeColor);
     ellipse(226 - veryCloseMoveX, 392 - veryCloseMoveY ,20,20);
     ellipse(224 - veryCloseMoveX, 372 - veryCloseMoveY ,30,20);
     ellipse(230 - veryCloseMoveX, 382 - veryCloseMoveY ,20,20);
