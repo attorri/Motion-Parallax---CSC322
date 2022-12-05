@@ -7,7 +7,6 @@ function draw() {
 	var sunset_Red = 0;
   var sunset_Green = 168 - moveMax/10;
   var sunset_Blue = 224 - moveMax/10;
-  //RGB: (0, 168, 224)
   background(sunset_Red, sunset_Green, sunset_Blue);
 
   function GetRandomInteger(a, b) 
