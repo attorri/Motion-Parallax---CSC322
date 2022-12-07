@@ -19,10 +19,13 @@ var randomInt = GetRandomInteger(1, 255);
 
   // sun
   var sunMoveX = mouseX/200;
-  var sunMoveY = mouseY/200;
+  var sunMoveY = mouseY/100;
   noStroke();
-  fill(300,200, 10);
-  ellipse(450 - sunMoveX , 60 - sunMoveY ,60);
+  var sunRed = 300 - moveMax/20;
+  var sunBlue = 200 - moveMax/20;
+  // no need to change the green.
+  fill(sunRed,sunBlue, 10);
+  ellipse(450 + sunMoveX , 60 + sunMoveY ,60);
   
   
   function mountains() {
@@ -38,7 +41,7 @@ var randomInt = GetRandomInteger(1, 255);
   var m1_x3 = 208 - horizontalMove;
   
   
-	fill(20, 0 , 50);
+	fill(117 - moveMax/10 , 85 - moveMax/10 ,64);
   mountain1 =  triangle(m1_x1 , allMountains_Base , m1_x2 , topOfMountain_Y , m1_x3 , allMountains_Base);
   
   // Mountain 2
@@ -46,9 +49,8 @@ var randomInt = GetRandomInteger(1, 255);
   var m2_x2 = 252 - horizontalMove;
   var m2_x3 = 358 - horizontalMove;
   
-
   
-  fill(255, 55 ,20);
+  fill(240 - moveMax/10 , 228 - moveMax/10 ,203 - moveMax/10);
   mountain2 = triangle(m2_x1 , allMountains_Base , m2_x2 , topOfMountain_Y, m2_x3 ,allMountains_Base);
   
   // Mountain 3
@@ -57,9 +59,7 @@ var randomInt = GetRandomInteger(1, 255);
   var m3_x3 = 488 - horizontalMove;
   
   
- 
-  
-  fill(40 , 0 , randomInt);
+  fill(217 - moveMax/10 , 142 - moveMax/10 , 4 );
   mountain3 = triangle(m3_x1 , allMountains_Base , m3_x2 , topOfMountain_Y , m3_x3 , allMountains_Base);
   
   // mountain 4
@@ -68,8 +68,7 @@ var randomInt = GetRandomInteger(1, 255);
   var m4_x3 = 638 - horizontalMove;
   var m4_x4 = 208;
   
-  
-  fill(randomInt,randomInt,200);
+  fill( 153 - moveMax/10 , 184 - moveMax/10 , 158 - moveMax/10 );
   mountain3 = triangle(m4_x1 , allMountains_Base , m4_x2 , topOfMountain_Y , m4_x3 , allMountains_Base);
   
   }
@@ -153,7 +152,6 @@ var rgbcolor = random_rgba();
   
   var brownTreeColor = "#3b3429";
   var greenTreeColor = "#094026";
-  
   function farTrees(){
   
   	
@@ -279,8 +277,6 @@ var rgbcolor = random_rgba();
     
    
     
-    
-    
 	};
 
 	farTrees();
@@ -292,7 +288,7 @@ var rgbcolor = random_rgba();
     
     // semi-close tree 1
     scale(1.5);
-    translate(10,-50);
+    translate(10,-75);
     fill(brownTreeColor); 
     rect(420 - semiCloseMoveX, 294 - semiCloseMoveY , 10, 20); 
     fill(greenTreeColor);
@@ -380,96 +376,65 @@ var rgbcolor = random_rgba();
   semiCloseTrees();
   
   function veryCloseTrees(){
+  	var veryCloseMoveX =  mouseX/10;
+    var veryCloseMoveY = mouseY/20;
   	var veryCloseMoveX =  mouseX/20;
     var veryCloseMoveY = mouseY/40;
-    
+
     // very close tree 1
-    
+
     translate(0,-50);
-    
-    fill(brownTreeColor);
-    rect(0 - veryCloseMoveX, 394 - veryCloseMoveY ,10,20); 
-    fill(greenTreeColor);
-    ellipse(6 - veryCloseMoveX, 392 - veryCloseMoveY ,20,20);
-    ellipse(4 - veryCloseMoveX, 372 - veryCloseMoveY ,30,20);
-    ellipse(10 - veryCloseMoveX, 382 - veryCloseMoveY ,20,20);
-    
+
+   
+
+
     fill(brownTreeColor);
     rect(50 - veryCloseMoveX, 394 - veryCloseMoveY ,10,20); 
     fill(greenTreeColor);
     ellipse(56 - veryCloseMoveX, 392 - veryCloseMoveY ,20,20);
     ellipse(54 - veryCloseMoveX, 372 - veryCloseMoveY ,30,20);
     ellipse(60 - veryCloseMoveX, 382 - veryCloseMoveY ,20,20);
-    
+
     fill(brownTreeColor);
     rect(100 - veryCloseMoveX, 394 - veryCloseMoveY ,10,20); 
     fill(greenTreeColor);
     ellipse(106 - veryCloseMoveX, 392 - veryCloseMoveY ,20,20);
     ellipse(104 - veryCloseMoveX, 372 - veryCloseMoveY ,30,20);
     ellipse(110 - veryCloseMoveX, 382 - veryCloseMoveY ,20,20);
-    
+
     fill(brownTreeColor);
-    rect(150 - veryCloseMoveX, 394 - veryCloseMoveY ,10,20); 
+    rect(140 - veryCloseMoveX, 394 - veryCloseMoveY ,10,20); 
     fill(greenTreeColor);
-    ellipse(156 - veryCloseMoveX, 392 - veryCloseMoveY ,20,20);
-    ellipse(154 - veryCloseMoveX, 372 - veryCloseMoveY ,30,20);
-    ellipse(150 - veryCloseMoveX, 382 - veryCloseMoveY ,20,20);
+    ellipse(146 - veryCloseMoveX, 392 - veryCloseMoveY ,20,20);
+    ellipse(144 - veryCloseMoveX, 372 - veryCloseMoveY ,30,20);
+    ellipse(140 - veryCloseMoveX, 382 - veryCloseMoveY ,20,20);
     
-    fill(brownTreeColor);
+		fill(brownTreeColor);
     rect(180 - veryCloseMoveX, 394 - veryCloseMoveY ,10,20); 
+    rect(0 - veryCloseMoveX, 394 - veryCloseMoveY ,10,20); 
     fill(greenTreeColor);
     ellipse(186 - veryCloseMoveX, 392 - veryCloseMoveY ,20,20);
     ellipse(184 - veryCloseMoveX, 372 - veryCloseMoveY ,30,20);
     ellipse(190 - veryCloseMoveX, 382 - veryCloseMoveY ,20,20);
     
+    
+    ellipse(6 - veryCloseMoveX, 392 - veryCloseMoveY ,20,20);
+    ellipse(4 - veryCloseMoveX, 372 - veryCloseMoveY ,30,20);
+    ellipse(10 - veryCloseMoveX, 382 - veryCloseMoveY ,20,20);
+
+
+    fill(brownTreeColor);
+    rect(220 - veryCloseMoveX, 394 - veryCloseMoveY ,10,20); 
+    fill(greenTreeColor);
+    ellipse(226 - veryCloseMoveX, 392 - veryCloseMoveY ,20,20);
+    ellipse(224 - veryCloseMoveX, 372 - veryCloseMoveY ,30,20);
+    ellipse(230 - veryCloseMoveX, 382 - veryCloseMoveY ,20,20);
+
    	// very close tree 2
-    fill(brownTreeColor); 
-    rect(220 - veryCloseMoveX, 394 - veryCloseMoveY ,10,20);
-    fill(greenTreeColor);
-    ellipse(226 - veryCloseMoveX, 392 - veryCloseMoveY ,20,20);
-    ellipse(224 - veryCloseMoveX, 372 - veryCloseMoveY ,30,20);
-    ellipse(230 - veryCloseMoveX, 382 - veryCloseMoveY ,20,20);
+   
+
     
-    translate(50,0);
-    fill(brownTreeColor); 
-    rect(220 - veryCloseMoveX, 394 - veryCloseMoveY ,10,20);
-    fill(greenTreeColor);
-    ellipse(226 - veryCloseMoveX, 392 - veryCloseMoveY ,20,20);
-    ellipse(224 - veryCloseMoveX, 372 - veryCloseMoveY ,30,20);
-    ellipse(230 - veryCloseMoveX, 382 - veryCloseMoveY ,20,20);
-    
-    translate(50,0);
-    fill(brownTreeColor); 
-    rect(220 - veryCloseMoveX, 394 - veryCloseMoveY ,10,20);
-    fill(greenTreeColor);
-    ellipse(226 - veryCloseMoveX, 392 - veryCloseMoveY ,20,20);
-    ellipse(224 - veryCloseMoveX, 372 - veryCloseMoveY ,30,20);
-    ellipse(230 - veryCloseMoveX, 382 - veryCloseMoveY ,20,20);
-    
-    translate(50,0);
-    fill(brownTreeColor); 
-    rect(220 - veryCloseMoveX, 394 - veryCloseMoveY ,10,20);
-    fill(greenTreeColor);
-    ellipse(226 - veryCloseMoveX, 392 - veryCloseMoveY ,20,20);
-    ellipse(224 - veryCloseMoveX, 372 - veryCloseMoveY ,30,20);
-    ellipse(230 - veryCloseMoveX, 382 - veryCloseMoveY ,20,20);
-    
-    translate(50,0);
-    fill(brownTreeColor); 
-    rect(220 - veryCloseMoveX, 394 - veryCloseMoveY ,10,20);
-    fill(greenTreeColor);
-    ellipse(226 - veryCloseMoveX, 392 - veryCloseMoveY ,20,20);
-    ellipse(224 - veryCloseMoveX, 372 - veryCloseMoveY ,30,20);
-    ellipse(230 - veryCloseMoveX, 382 - veryCloseMoveY ,20,20);
-    
-    translate(50,0);
-    fill(brownTreeColor); 
-    rect(220 - veryCloseMoveX, 394 - veryCloseMoveY ,10,20);
-    fill(greenTreeColor);
-    ellipse(226 - veryCloseMoveX, 392 - veryCloseMoveY ,20,20);
-    ellipse(224 - veryCloseMoveX, 372 - veryCloseMoveY ,30,20);
-    ellipse(230 - veryCloseMoveX, 382 - veryCloseMoveY ,20,20);
-    
+
   };
   veryCloseTrees();
 
