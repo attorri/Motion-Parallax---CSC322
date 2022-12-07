@@ -378,7 +378,7 @@ var rgbcolor = random_rgba();
   };
   
   semiCloseTrees();
-  /*
+  
   function veryCloseTrees(){
   	var veryCloseMoveX =  mouseX/20;
     var veryCloseMoveY = mouseY/40;
@@ -472,7 +472,7 @@ var rgbcolor = random_rgba();
     
   };
   veryCloseTrees();
-*/
+
   
   mouseLocation(); // helpful when mapping out movement ratios
 } 
