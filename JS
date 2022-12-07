@@ -155,7 +155,7 @@ var rgbcolor = random_rgba();
   function farTrees(){
   
   	
-		var fartreeMoveX = mouseX/30;
+		var fartreeMoveX = mouseX/40;
     var fartreeMoveY = mouseY/80;
     
     // far tree 1
@@ -376,8 +376,6 @@ var rgbcolor = random_rgba();
   semiCloseTrees();
   
   function veryCloseTrees(){
-  	var veryCloseMoveX =  mouseX/10;
-    var veryCloseMoveY = mouseY/20;
   	var veryCloseMoveX =  mouseX/20;
     var veryCloseMoveY = mouseY/40;
 
